@@ -117,7 +117,7 @@ def setDNSRecord(route53ZoneId, hostRecordToMaintain, ipAddresses = []):
         resourceRecords.append({"Value": ipAddress})
     
     resourceRecordSet={
-          "Name": "host.proxyfleet.",
+          "Name": hostRecordToMaintain,
           "Type": "A",
           "TTL": 300,
           "ResourceRecords": resourceRecords
